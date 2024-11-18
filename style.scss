@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+@import "partials/cores"; /*importando o arquivo de estiliazação padrão das cores para dentro do arquivo de estilização.*/
+@import "partials/header";
+@import "partials/layout";
+
+body {
+    font-family: 'Sora', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    background-color: $primaria-normal;
+
+}
+
+button {
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+

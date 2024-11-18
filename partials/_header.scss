@@ -1,0 +1,94 @@
+header {
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i {
+    color: $branco-normal;
+}
+
+.icones-header{
+    display:flex;
+    gap: 14px;
+}
+
+.icones-header a:hover{
+    i {
+        animation: translateY 0.9s infinite alternate;
+        color: $amarelo-light;
+    }
+}
+
+/*Criando animação para ser aplicada quando passar o mouse sobre os icones*/
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1)
+    }
+}
+
+.header-button {
+    border: 1px solid $branco-normal;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.8s;
+
+    a{
+        color: $branco-normal;
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+.header-button:hover{
+    border: 1px solid $amarelo-light;
+    background-color: $amarelo-light;
+    
+    & a {
+        color: $preto-normal;
+        font-weight: 600;
+    }
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 768px) {
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-bottom: 16px;
+            margin-top: 14px;
+            font-size: 34px;
+        }
+    }
+
+
+    .header-logo img {
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
